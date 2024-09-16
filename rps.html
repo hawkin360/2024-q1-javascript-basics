@@ -3,18 +3,27 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Rock, Paper, Scissors Extreme Challenge!</title>
+		<title>rps</title>
 	</head>
 
-	<body>
-		<h1>Rock, Paper, Scissors</h1>
+	<body style="background-color: rgb(13, 230, 49);">
+		<h1 style="color: rgb(173, 24, 166);">stone, sheet of paper, cuting tool</h1>
 
 		<div id="player-controls">
-			<h2>Choose your weapon</h2>
-			<button id="btn-rock">Rock</button>
-			<button id="btn-paper">Paper</button>
-			<button id="btn-scissors">Scissors</button>
+			<h2 style="color: rgb(173, 24, 166);">Choose your tool of murder</h2>
+			<button id="btn-rock" style="color: rgb(173, 24, 166);">rock</button>
+			<button id="btn-paper" style="color: rgb(173, 24, 166);">Paper</button>
+			<button id="btn-scissors" style="color: rgb(173, 24, 166);">Scissors</button>
 		</div>
+
+		<h2 id="game-results" style="color: rgb(223, 22, 213);"></h2>
+
+		<div id="game-restart" style="display: none;">
+			<h3>do you want to play again</h3>
+			<button id="btn-restart">play again</button>
+		</div>
+
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShwdyrTAoX8DNYyiJ-tcWB0U7zfyvO0P30hOt9tl0o1HsAZ3s&s" alt="rock">
 
 		<script src="scripts/rps-game.js"></script>
 	</body>

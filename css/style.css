@@ -19,4 +19,5 @@ body {
 	width: 800px;
 	height: 600px;
 	border: solid 1px black;
+	align-items: center;
 }

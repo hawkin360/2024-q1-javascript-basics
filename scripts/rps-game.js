@@ -2,6 +2,13 @@
 
 let playerControls = document.getElementById("player-controls");
 
+//game-results
+/** @type { HTMLElement } */
+//@ts-ignore We know game result header is not null
+let gameResultHeader = document.getElementById("game-results");
+
+gameResultHeader.innerText = "Hello";
+
 let isGameOver = false;
 
 let weapons = [
@@ -26,16 +33,16 @@ function pickRandomWeapon(weapons) {
 
 function determineOutcome(playerWeapon, computerWeapon) {
 	if (playerWeapon.type === computerWeapon.type) {
-		return "It's a tie! Try again!";
+		return "It's a tie";
 	}
 
 	isGameOver = true;
 
 	if (playerWeapon.beats === computerWeapon.type) {
-		return `Player wins! ${playerWeapon.type} beats ${computerWeapon.type}`;
+		return `Player wins ${playerWeapon.type} beats ${computerWeapon.type}`;
 	}
 
-	return `Computer wins! ${computerWeapon.type} beats ${playerWeapon.type}`;
+	return `Computer wins ${computerWeapon.type} beats ${playerWeapon.type}`;
 }
 
 function playerControlHandler(e) {
@@ -54,7 +61,8 @@ function playerControlHandler(e) {
 	let computerWeapon = pickRandomWeapon(weapons);
 
 	let result = determineOutcome(playerWeapon, computerWeapon);
-
+	
+	gameResultHeader.innerText = result;
 	console.log(result);
 }
 
